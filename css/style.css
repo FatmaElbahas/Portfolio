@@ -1,0 +1,371 @@
+/** Global Styles */
+:root{
+    --main-color: #1C1C1C ;
+    --heading-color: #343434;
+    --text-color:#748182;
+    --reapted-color:#f7f7f7;
+    --foot-color:#5B5B5B;
+    --input-color:#F4F4F4;
+}
+html{
+    scroll-padding-top:72px ;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-family: "Montserrat", sans-serif;
+    color: var(--heading-color);
+
+}
+a{
+    color: inherit !important;
+    text-decoration: none !important;
+}
+ul li{
+    list-style: none;
+}
+.title{
+    overflow: hidden !important ;
+}
+.title h2{
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--heading-color);
+    padding: 10px;
+    position: relative !important;
+    z-index: 1;
+}
+.title h2::before {
+    content: "";
+    width: 100% !important;
+    height: 30px !important;
+    background-image: url(../images/dots.png) !important ;
+    background-repeat: repeat !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    z-index: -1 !important;
+}
+.text-color{
+    color: var(--text-color);
+}
+.main-color{
+    color: var(--main-color);
+}
+.main-bg{
+    background-color: var(--main-color);
+}
+.head-color{
+    color: var(--heading-color);
+}
+.bg-head{
+    background-color: var(--heading-color);
+}
+.bg-color{
+background-color: #f5f5f5;
+}
+.bg-repeat{
+    background-color: var(--reapted-color);
+}
+.foot-bg{
+    background-color: var(--foot-color);
+}
+.bg-input{
+    background-color: var(--input-color);
+}
+.pb-7 {
+    padding-bottom: 700px;
+}   
+.fs-18{
+    font-size: 1.125rem;
+}
+.fs-20{
+    font-size: 20px;
+}
+/*~ Navbar  */
+/* اللون الافتراضي للنافبار */
+/* عند التمرير، سيتحول الـ Navbar إلى أبيض */
+.navbar.scrolled {
+    background-color: white !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* تغيير لون النصوص في الـ Navbar عند التمرير */
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link,.navbar-icon {
+    color: black !important;
+}
+.navbar.hide{
+    top:-100px !important;
+}
+/* تغيير لون النصوص في الوضع العادي */
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important;
+}
+.nav-link.active{
+    position: relative;
+}
+.nav-link.active::before
+{
+content: "" !important;
+position: absolute !important;
+width: 60% !important;
+bottom: 5px !important;
+height: 2px !important;
+background-color: #fff !important;
+transition:width 500ms ;
+
+}
+
+/*! Home Start */
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../images/bg.jpg);
+    background-position: start;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 65px;
+}
+
+
+
+/*^ About */
+.about  .about-image{
+    position: relative !important;
+    z-index: 1 !important;
+}
+.icon6{
+    top: 10%;
+    right: 5%;
+    opacity: 0;
+    transition: all 2s;
+    color: blue;
+}
+.about-image:hover .icon6{
+    opacity: 1;
+    
+}
+
+
+.about  .about-image::after{
+    content: "";
+    width: 100% ;
+    height: 80% !important;
+    background-image: url(../images/dots.png) !important ;
+    background-repeat: repeat !important;
+    position: absolute !important;
+   bottom: -6% !important;
+    left: -5% !important;
+  z-index:-1 !important;
+}
+.about span{
+    color: #999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.progress{
+    height: 25px !important;
+    width: 100% !important;
+}
+.btn1{
+    padding: 11px 26px;
+    color: #ffffff;
+    border: none;
+    font-size: .8125rem;
+    border-radius: 5px;
+}
+.button1{
+    background-color: var(--main-color);
+}
+.button1:hover{
+    background-color:transparent;
+    color: var(--text-color) !important;
+    border: solid .125rem;
+}
+.button2{
+background-color: #fff;
+color: var(--text-color);
+border: solid .125rem;
+padding: 5px 25px !important;
+left: 23%;
+}
+.button2:hover{
+    background-color: var(--main-color);
+    color: #fff !important;
+}
+/*! SERVICES START */
+.Services{
+    background-color: #f7f7f7;
+}
+ .icon2{
+    width: 90px;
+    height: 90px;
+    color: black;
+    border: 2px solid !important;
+    border-color: #fff !important;
+    background-color: var(--reapted-color);
+   transition: background-color 500ms ease-in-out ,color 1s ease-in-out,border-color 1s ease-in-out  ;
+}
+.inner:hover .icon2{
+    background-color: var(--main-color);
+    color: #fff;
+    border-color:rgba(255,255,255,0.9) ;
+}
+
+/*~ portfolio */
+.overlay{
+    background-color: rgba(255,255,255,0.9);
+    border: 5px solid #D7D5D6 !important;
+    opacity: 0;
+    transition:background-color 500ms ,opacity 500ms ;
+}
+.overlay:hover{
+opacity: 1;
+}
+.Portfolio .nav-link.active{
+    background-color: #fff !important;
+    color: #000 !important;
+    position: relative !important;
+}
+.Portfolio .nav-link:hover{
+color: #000 !important;
+}
+.Portfolio .nav-link.active::before
+{
+ content: "";
+position: absolute !important;
+width: 50% !important;
+border-bottom: 4px solid !important;
+height: 2px solid #000 !important;
+bottom: 0;
+}
+.carousel-item .avatar img {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50% !important;
+}
+.container-testmonial{
+height: 75vh !important;
+position: relative;
+/* background-color: red !important; */
+}
+.carousel.slide{
+   
+    height: 70% !important;
+    /* background-color: yellow !important; */
+}
+.span-testmonial{
+    color: #888888 !important;
+    font-size: 12px !important;
+    font-weight: 600;
+}
+.carousel-indicators button {
+    width: 10px !important; /* تحديد العرض */
+    height: 10px !important; /* تحديد الارتفاع */
+    background-color: rgba(0, 0, 0, 0.5) !important; /* لون الخلفية */
+    border-radius: 50% !important; /* جعل الأزرار دائرية */
+    display: flex !important;
+    gap: 2000px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+}
+ /*& Counter Section Start  */
+.counter{
+    font-size: 30;
+    font-weight: bold;
+}
+.counter-box i{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+/*! Team Section Start */
+.card-image {
+    transition: transform 0.5s;
+}
+ .card-image:hover{
+    transform: scale(1.1);
+} 
+
+.overlay2{
+   opacity: 0;
+   background-color:rgba(255, 255, 255, 0.95)!important;
+  z-index: 2;
+   transform:  rotateY(180deg)  scale(0.5 ,0.5) !important ;
+   transition: opacity 0.5s ease,transform 0.5s ease !important;
+ cursor: pointer !important;
+ margin: auto;
+ height: 100% !important ;
+ width: 100% !important;
+ 
+}
+.card:hover .overlay2{
+  opacity: 1;
+  transform: rotateY(0deg) !important ;
+  
+ 
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    border: 3px solid #000 ;
+    
+    background-color: #000;
+    
+}
+.icon:hover{
+   
+    color: #000;
+    
+    
+    background-color: #fff;
+    
+}
+/*^ CONTACT SECTION START  */
+.icon3{
+    width: 70px;
+    height: 70px;
+    color: black;
+    border-color: #fff !important;
+    background-color: var(--reapted-color);    
+}
+.inner:hover .icon3{
+    background-color: var(--main-color);
+    color: #fff;
+    border-color:var(--main-color) ;
+}
+.btn{
+    padding: 10px 40px !important;
+    color: #ffffff;
+    border: none;
+    font-size: .8125rem;
+    border-radius: 5px;
+}
+.button1{
+    background-color: var(--main-color);
+}
+.button1:hover{
+    background-color:transparent;
+    color: var(--text-color) !important;
+    border: solid .125rem;
+}
+input ,textarea{
+    background-color: var(--input-color) !important;
+}
+.form-control:focus {
+   
+    box-shadow: none !important; 
+    border: none !important;
+}
+
+
